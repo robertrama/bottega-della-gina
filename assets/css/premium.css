@@ -1,0 +1,38 @@
+/* ==========================================================================
+   La Bottega della Gina — Premium interactions layer
+   Hero cinematic entrance, storia reveal, magnetic buttons
+   ========================================================================== */
+
+/* ---- Hero eyebrow rule ---- */
+.eyebrow-wrap { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+.eyebrow-wrap .eyebrow { margin-bottom: 0; }
+.eyebrow-rule {
+  display: inline-block;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  color: var(--color-primary);
+}
+.hero .eyebrow-rule { color: #E9B98A; }
+
+/* ---- Hero title chunks (animated independently by premium.js) ---- */
+.hero-title span, .hero-title em { display: inline-block; }
+
+/* ---- Ken Burns image scale ---- */
+.hero-media img { transform-origin: center center; }
+
+/* ---- Storia media frame ---- */
+.reveal-frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.reveal-frame picture, .reveal-frame img { display: block; }
+
+/* ---- Magnetic buttons ---- */
+.btn { will-change: transform; }
+
+/* ---- Animated stat counters (no visual change, just marks the number as JS-driven) ---- */
+.storia-facts strong { font-variant-numeric: tabular-nums; }

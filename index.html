@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Bottega della Gina — Pasta Fresca Artigianale a Verona</title>
+<meta name="description" content="Tortellini, tortelloni, tagliatelle e gnocchi fatti a mano ogni giorno. La Bottega della Gina, Via Abramo Massalongo 5/a, Verona. Asporto e barattolino da passeggio.">
+<meta name="theme-color" content="#8C3A2B">
+
+<meta property="og:title" content="La Bottega della Gina — Pasta Fresca Artigianale a Verona">
+<meta property="og:description" content="Gina = Pasta. Tortellini, tortelloni e tagliatelle fatti a mano ogni giorno, come una volta.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/hero.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/premium.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skip_link">Salta al contenuto principale</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#hero" class="brand" aria-label="La Bottega della Gina — Home">
+      <img src="assets/img/logo.png" alt="La Bottega della Gina" class="brand-logo" width="145" height="40">
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="#storia" data-i18n="nav_storia">La Storia</a></li>
+        <li><a href="menu.html" data-i18n="nav_menu">Il Menù</a></li>
+        <li><a href="#barattolino" data-i18n="nav_barattolino">Da Passeggio</a></li>
+        <li><a href="#galleria" data-i18n="nav_galleria">Galleria</a></li>
+        <li><a href="#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambia lingua / Change language">
+        <span class="lang-option" data-lang-btn="it">IT</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang-btn="en">EN</span>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="tel:0039045594725" data-i18n="nav_call">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        Chiama ora
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="#storia" data-i18n="nav_storia">La Storia</a></li>
+      <li><a href="menu.html" data-i18n="nav_menu">Il Menù</a></li>
+      <li><a href="#barattolino" data-i18n="nav_barattolino">Da Passeggio</a></li>
+      <li><a href="#galleria" data-i18n="nav_galleria">Galleria</a></li>
+      <li><a href="#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:0039045594725" data-i18n="nav_call">Chiama ora</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <picture>
+        <source srcset="assets/img/hero.webp" type="image/webp">
+        <img src="assets/img/hero.jpg" alt="Vasetti di sugo artigianale Don Antonio e pasta fresca esposta nella bottega" fetchpriority="high" width="2200" height="1466">
+      </picture>
+      <div class="hero-scrim" aria-hidden="true"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="eyebrow-wrap" data-reveal>
+        <span class="eyebrow-rule" aria-hidden="true"></span>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Verona · Pasta fresca ogni giorno</p>
+      </div>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_line1">Gina</span>
+        <em data-i18n="hero_title_line2"> è Pasta</em>
+      </h1>
+      <p class="hero-subtitle" data-reveal data-i18n="hero_subtitle">
+        Tortellini, tortelloni e tagliatelle fatti a mano ogni giorno, con la stessa passione di una domenica in famiglia.
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#menu" class="btn btn-primary btn-lg" data-i18n="hero_cta_menu">Scopri il menù</a>
+        <a href="#dove-siamo" class="btn btn-ghost btn-lg" data-i18n="hero_cta_where">Dove siamo</a>
+      </div>
+    </div>
+    <a href="#storia" class="scroll-cue" aria-label="Scorri per continuare">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- STORIA -->
+  <section class="storia" id="storia">
+    <div class="container storia-grid">
+      <div class="storia-media" id="storia-media">
+        <div class="reveal-frame">
+          <picture>
+            <source srcset="assets/img/storia-gina.webp" type="image/webp">
+            <img src="assets/img/storia-gina.jpg" alt="Gina sorride mentre prepara i gnocchi freschi in laboratorio" loading="lazy" width="1066" height="1600">
+          </picture>
+        </div>
+        <picture class="storia-media-small">
+          <source srcset="assets/img/storia-mani.webp" type="image/webp">
+          <img src="assets/img/storia-mani.jpg" alt="Mani esperte piegano un tortellino di pasta fresca" loading="lazy" width="1066" height="1600">
+        </picture>
+      </div>
+      <div class="storia-text">
+        <p class="eyebrow" data-reveal data-i18n="storia_eyebrow">La nostra storia</p>
+        <h2 data-reveal data-i18n="storia_title">Come una volta</h2>
+        <p class="lead" data-reveal data-i18n="storia_lead">
+          La pasta fresca è tradizione, passione, gusto. È il ricordo della domenica, è celebrazione dello stare insieme.
+        </p>
+        <p data-reveal data-i18n="storia_body">
+          Ecco perché abbiamo deciso di offrirvi tante bontà preparate fresche ogni giorno: per regalare gioia, un tortellone dopo l'altro. Tutti i giorni prepariamo tortelloni, tortellini, tagliatelle, gnocchi e tutto quello che la fantasia e gli ingredienti di stagione ci ispirano.
+        </p>
+        <ul class="storia-facts" data-reveal>
+          <li><strong class="stat-count" data-count="100" data-suffix="%">0%</strong><span data-i18n="storia_fact1_label">fatta a mano, ogni giorno</span></li>
+          <li><strong class="stat-count" data-count="6" data-suffix="">0</strong><span data-i18n="storia_fact2_label">giorni su 7 aperti</span></li>
+          <li><strong class="stat-count" data-count="0" data-suffix="">0</strong><span data-i18n="storia_fact3_label">prenotazione richiesta</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow" data-reveal data-i18n="menu_eyebrow">Pasta quando vuoi</p>
+        <h2 data-reveal data-i18n="menu_title">Il Menù</h2>
+        <p class="section-lead" data-reveal data-i18n="menu_lead">
+          Ogni giorno in laboratorio: le nostre specialità, sempre fresche e pronte da cucinare in pochi minuti.
+        </p>
+      </div>
+
+      <div class="menu-bento">
+        <article class="bento-tile" data-tile="feature" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-tortellini.webp" type="image/webp">
+            <img src="assets/img/menu-tortellini.jpg" alt="Vassoio di tortellini freschi con etichette scritte a mano, erbette e ricotta, funghi porcini" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="menu_tortellini_title">Tortellini</h3>
+            <p data-i18n="menu_tortellini_desc">Il cuore della bottega: ripieni classici e stagionali, piegati uno a uno a mano.</p>
+          </div>
+        </article>
+
+        <article class="bento-tile" data-tile="wide" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-tortelloni.webp" type="image/webp">
+            <img src="assets/img/menu-tortelloni.jpg" alt="Tortelloni fatti a mano disposti su un tagliere di legno infarinato" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="menu_tortelloni_title">Tortelloni</h3>
+            <p data-i18n="menu_tortelloni_desc">Formato generoso, ripieni ricchi: la pasta della domenica tutti i giorni della settimana.</p>
+          </div>
+        </article>
+
+        <article class="bento-tile" data-tile="small1" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-tagliatelle.webp" type="image/webp">
+            <img src="assets/img/menu-tagliatelle.jpg" alt="Bancone della bottega con tagliatelle e pappardelle fresche" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="menu_tagliatelle_title">Tagliatelle e Pappardelle</h3>
+            <p data-i18n="menu_tagliatelle_desc">Tirate a mano ogni mattina, pronte per il vostro sugo preferito.</p>
+          </div>
+        </article>
+
+        <article class="bento-tile" data-tile="small2" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-gnocchi.webp" type="image/webp">
+            <img src="assets/img/menu-gnocchi.jpg" alt="Gnocchi di patate freschi con etichetta scritta a mano" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="menu_gnocchi_title">Gnocchi</h3>
+            <p data-i18n="menu_gnocchi_desc">Morbidi, leggeri, preparati con patate selezionate ogni giorno.</p>
+          </div>
+        </article>
+
+        <article class="bento-tile" data-tile="banner" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-specialita.webp" type="image/webp">
+            <img src="assets/img/menu-specialita.jpg" alt="Cassette di legno colme di pasta ripiena fatta a mano, pronta per l'essiccazione" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="menu_specialita_title">Ravioli e Specialità</h3>
+            <p data-i18n="menu_specialita_desc">Proposte stagionali che nascono dalla fantasia della bottega e dagli ingredienti del momento.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-note" data-reveal data-i18n="menu_note">Il menù cambia con la stagione — chiedici le proposte del giorno in negozio o al telefono.</p>
+      <div class="menu-full-cta" data-reveal>
+        <a href="menu.html" class="btn btn-ghost" data-i18n="menu_full_cta">Vedi il menù completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARATTOLINO DA PASSEGGIO -->
+  <section class="barattolino" id="barattolino">
+    <div class="container barattolino-grid">
+      <div class="barattolino-text">
+        <p class="eyebrow" data-reveal data-i18n="barattolino_eyebrow">Da anni un must</p>
+        <h2 data-reveal data-i18n="barattolino_title">Il Barattolino da Passeggio</h2>
+        <p class="lead" data-reveal data-i18n="barattolino_lead">
+          Scegli il tuo primo preferito e lo cuciniamo all'istante, da gustare ai tavoli interni, esterni — o passeggiando per Verona.
+        </p>
+        <ul class="barattolino-list" data-reveal>
+          <li data-i18n="barattolino_point1">Servizio no-stop, nessuna prenotazione richiesta</li>
+          <li data-i18n="barattolino_point2">Perfetto per una pausa veloce in centro</li>
+          <li data-i18n="barattolino_point3">Info gruppi via email</li>
+        </ul>
+        <div class="hero-actions" data-reveal>
+          <a href="tel:0039045594725" class="btn btn-primary" data-i18n="barattolino_cta">Chiama ora</a>
+          <a href="mailto:info@labottegadellagina.it" class="btn btn-ghost" data-i18n="barattolino_cta_mail">Scrivici per gruppi</a>
+        </div>
+      </div>
+      <div class="barattolino-media" data-reveal>
+        <picture>
+          <source srcset="assets/img/barattolino.webp" type="image/webp">
+          <img src="assets/img/barattolino.jpg" alt="Barattolino da passeggio con tortellini, ravioli e parmigiano grattugiato al momento" loading="lazy" width="1066" height="1600">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA -->
+  <section class="galleria" id="galleria">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow" data-reveal data-i18n="galleria_eyebrow">Uno sguardo in bottega</p>
+        <h2 data-reveal data-i18n="galleria_title">Galleria</h2>
+      </div>
+    </div>
+    <div class="gallery-viewport">
+      <div class="gallery-track" id="gallery-track">
+        <button class="gallery-item size-wide" data-reveal data-index="0" aria-label="Apri foto 1 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-01.webp" type="image/webp"><img src="assets/img/gallery/gallery-01.jpg" alt="Preparazione di tortellini a mano nel laboratorio della bottega" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-tall" data-reveal data-index="1" aria-label="Apri foto 2 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-02.webp" type="image/webp"><img src="assets/img/gallery/gallery-02.jpg" alt="Dettaglio di pasta fresca disposta su un tavolo di legno" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-square" data-reveal data-index="2" aria-label="Apri foto 3 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-03.webp" type="image/webp"><img src="assets/img/gallery/gallery-03.jpg" alt="Vista della vetrina della bottega con i prodotti in esposizione" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-tall" data-reveal data-index="3" aria-label="Apri foto 4 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-04.webp" type="image/webp"><img src="assets/img/gallery/gallery-04.jpg" alt="Momento di lavorazione della pasta fresca in laboratorio" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-wide" data-reveal data-index="4" aria-label="Apri foto 5 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-05.webp" type="image/webp"><img src="assets/img/gallery/gallery-05.jpg" alt="Pasta all'uovo stesa a mano pronta per essere tagliata" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-square" data-reveal data-index="5" aria-label="Apri foto 6 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-06.webp" type="image/webp"><img src="assets/img/gallery/gallery-06.jpg" alt="Preparazione artigianale della pasta fresca nella bottega" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-tall" data-reveal data-index="6" aria-label="Apri foto 7 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-07.webp" type="image/webp"><img src="assets/img/gallery/gallery-07.jpg" alt="Dettaglio di lavorazione della pasta ripiena" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-wide" data-reveal data-index="7" aria-label="Apri foto 8 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-08.webp" type="image/webp"><img src="assets/img/gallery/gallery-08.jpg" alt="Preparazione di pasta fresca stagionale nel laboratorio" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-square" data-reveal data-index="8" aria-label="Apri foto 9 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-09.webp" type="image/webp"><img src="assets/img/gallery/gallery-09.jpg" alt="Sfoglia di pasta fresca al centro del laboratorio" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-tall" data-reveal data-index="9" aria-label="Apri foto 10 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-10.webp" type="image/webp"><img src="assets/img/gallery/gallery-10.jpg" alt="Barattolino da passeggio pronto per essere servito" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-wide" data-reveal data-index="10" aria-label="Apri foto 11 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-11.webp" type="image/webp"><img src="assets/img/gallery/gallery-11.jpg" alt="Taglio a mano della sfoglia di pasta fresca" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-square" data-reveal data-index="11" aria-label="Apri foto 12 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-12.webp" type="image/webp"><img src="assets/img/gallery/gallery-12.jpg" alt="Trafila per la pasta corta nel laboratorio della bottega" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-tall" data-reveal data-index="12" aria-label="Apri foto 13 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-13.webp" type="image/webp"><img src="assets/img/gallery/gallery-13.jpg" alt="Preparazione di piatti pronti in cucina" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-wide" data-reveal data-index="13" aria-label="Apri foto 14 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-14.webp" type="image/webp"><img src="assets/img/gallery/gallery-14.jpg" alt="Lavorazione della pasta fresca al bancone" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+        <button class="gallery-item size-square" data-reveal data-index="14" aria-label="Apri foto 15 in dimensione grande">
+          <picture><source srcset="assets/img/gallery/gallery-15.webp" type="image/webp"><img src="assets/img/gallery/gallery-15.jpg" alt="Signora della bottega al lavoro con la tagliatrice di pasta" loading="lazy" width="1066" height="1600"></picture>
+        </button>
+      </div>
+    </div>
+    <div class="gallery-nav container">
+      <div class="gallery-progress"><span class="gallery-progress-bar" id="gallery-progress-bar"></span></div>
+      <div class="gallery-arrows">
+        <button class="gallery-arrow" id="gallery-prev" aria-label="Scorri indietro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="gallery-arrow" id="gallery-next" aria-label="Scorri avanti">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOVE SIAMO -->
+  <section class="dove-siamo" id="dove-siamo">
+    <div class="container dove-grid">
+      <div class="dove-text" data-reveal>
+        <p class="eyebrow" data-i18n="dove_eyebrow">Vieni a trovarci</p>
+        <h2 data-i18n="dove_title">Dove Siamo</h2>
+
+        <div class="info-block">
+          <h3 data-i18n="dove_address_label">Indirizzo</h3>
+          <p>Via Abramo Massalongo 5/a<br>37121 Verona (VR)</p>
+        </div>
+
+        <div class="info-block">
+          <h3 data-i18n="dove_hours_label">Orari</h3>
+          <p><span data-i18n="dove_hours_days">Martedì → Domenica</span><br>10:00 – 21:30</p>
+          <p class="muted" data-i18n="dove_hours_closed">Lunedì chiuso</p>
+        </div>
+
+        <div class="info-block">
+          <h3 data-i18n="dove_contact_label">Contatti</h3>
+          <p><a href="tel:0039045594725">045 594725</a></p>
+          <p><a href="mailto:info@labottegadellagina.it">info@labottegadellagina.it</a></p>
+        </div>
+
+        <div class="social-row">
+          <a href="https://www.facebook.com/labottegadellagina/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.3 3.1 15.2 3 14 3c-2.5 0-4.3 1.5-4.3 4.4v2.4H7v3.2h2.7V21h3.8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/labottegadellagina/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3c2.4 0 2.7 0 3.7.1 1 0 1.6.2 2 .4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.3 1 .4 2 .1 1 .1 1.3.1 3.7s0 2.7-.1 3.7c0 1-.2 1.6-.4 2-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.2-1 .3-2 .4-1 .1-1.3.1-3.7.1s-2.7 0-3.7-.1c-1 0-1.6-.2-2-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.4-.3-1-.4-2C3 14.7 3 14.4 3 12s0-2.7.1-3.7c0-1 .2-1.6.4-2 .2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1-.3 2-.4C8.7 3 9 3 12 3zm0 1.8c-2.3 0-2.6 0-3.6.1-.8 0-1.3.2-1.6.3-.4.1-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.8-.3 1.6-.1 1-.1 1.3-.1 3.6s0 2.6.1 3.6c0 .8.2 1.3.3 1.6.1.4.3.7.6 1 .3.3.6.5 1 .6.3.1.8.3 1.6.3 1 .1 1.3.1 3.6.1s2.6 0 3.6-.1c.8 0 1.3-.2 1.6-.3.4-.1.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.8.3-1.6.1-1 .1-1.3.1-3.6s0-2.6-.1-3.6c0-.8-.2-1.3-.3-1.6-.1-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.8-.3-1.6-.3-1-.1-1.3-.1-3.6-.1zm0 3.3a3.9 3.9 0 110 7.8 3.9 3.9 0 010-7.8zm0 1.8a2.1 2.1 0 100 4.2 2.1 2.1 0 000-4.2zm5-2a.9.9 0 11-1.8 0 .9.9 0 011.8 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="dove-map" data-reveal>
+        <iframe
+          src="https://www.google.com/maps?q=Via+Abramo+Massalongo+5/a,+37121+Verona,+Italia&output=embed"
+          width="100%" height="100%" style="border:0"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mappa: La Bottega della Gina, Via Abramo Massalongo 5/a, Verona">
+        </iframe>
+        <a class="map-link" href="https://g.page/LaBottegadellaGinaVerona" target="_blank" rel="noopener" data-i18n="dove_map_link">Apri in Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="container newsletter-inner">
+      <div class="newsletter-text" data-reveal>
+        <p class="eyebrow" data-i18n="newsletter_eyebrow">Resta aggiornato</p>
+        <h2 data-i18n="newsletter_title">Novità, eventi e menù delle festività</h2>
+        <p data-i18n="newsletter_body">Iscriviti per ricevere in anteprima le proposte stagionali e le informazioni sulle prenotazioni per le festività.</p>
+      </div>
+
+      <form class="newsletter-form" id="newsletter-form" data-reveal novalidate>
+        <!--
+          Integrazione consigliata: collegare questo form a Mailchimp o Brevo (ex Sendinblue).
+          Sostituire l'attributo action con l'endpoint del proprio account, es.:
+          Mailchimp: action="https://<dc>.list-manage.com/subscribe/post?u=<user-id>&id=<list-id>" method="post" target="_blank"
+          Brevo: usare l'embed form fornito dalla piattaforma (form action + hidden fields).
+        -->
+        <div class="form-row">
+          <label for="newsletter-name" data-i18n="newsletter_name_label">Nome</label>
+          <input type="text" id="newsletter-name" name="name" autocomplete="given-name" required>
+        </div>
+        <div class="form-row">
+          <label for="newsletter-email" data-i18n="newsletter_email_label">Email</label>
+          <input type="email" id="newsletter-email" name="email" autocomplete="email" required>
+          <p class="form-error" id="newsletter-error" role="alert" hidden data-i18n="newsletter_error">Inserisci un indirizzo email valido.</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" data-i18n="newsletter_submit">Iscrivimi</button>
+        <p class="form-success" id="newsletter-success" role="status" aria-live="polite" hidden data-i18n="newsletter_success">Grazie! Controlla la tua casella email per confermare l'iscrizione.</p>
+        <p class="form-privacy" data-i18n="newsletter_privacy">Iscrivendoti accetti la nostra <a href="https://www.iubenda.com/privacy-policy/65418790" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="footer-wordmark">La Bottega <em>della Gina</em></span>
+      <p data-i18n="footer_tagline">Pasta fresca artigianale, ogni giorno, a Verona.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_explore">Esplora</h4>
+      <ul>
+        <li><a href="#storia" data-i18n="nav_storia">La Storia</a></li>
+        <li><a href="menu.html" data-i18n="nav_menu">Il Menù</a></li>
+        <li><a href="#galleria" data-i18n="nav_galleria">Galleria</a></li>
+        <li><a href="#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Contatti</h4>
+      <ul>
+        <li><a href="tel:0039045594725">045 594725</a></li>
+        <li><a href="mailto:info@labottegadellagina.it">info@labottegadellagina.it</a></li>
+        <li>Via Abramo Massalongo 5/a, 37121 Verona</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_legal">Note legali</h4>
+      <ul>
+        <li>LA BOTTEGA DELLA GINA SAS DI AMBROSINO E ROSSATO</li>
+        <li>P. IVA 03986970238</li>
+        <li><a href="https://www.iubenda.com/privacy-policy/65418790" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="https://www.iubenda.com/privacy-policy/65418790/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="footer-year">2026</span> La Bottega della Gina.</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lightbox-prev" id="lightbox-prev" aria-label="Foto precedente">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" id="lightbox-next" aria-label="Foto successiva">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/premium.js" defer></script>
+</body>
+</html>

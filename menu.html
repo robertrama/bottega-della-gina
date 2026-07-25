@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Menù — La Bottega della Gina, Verona</title>
+<meta name="description" content="Il menù del Barattolino da Passeggio e la pasta fresca da asporto a peso: tortellini, tortelloni, gnocchi e tagliatelle della Bottega della Gina a Verona.">
+<meta name="theme-color" content="#8C3A2B">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/premium.css">
+</head>
+<body data-i18n-page="fullmenu">
+
+<a class="skip-link" href="#main" data-i18n="skip_link">Salta al contenuto principale</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="La Bottega della Gina — Home">
+      <img src="assets/img/logo.png" alt="La Bottega della Gina" class="brand-logo" width="145" height="40">
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="index.html#storia" data-i18n="nav_storia">La Storia</a></li>
+        <li><a href="menu.html" aria-current="page" data-i18n="nav_menu">Il Menù</a></li>
+        <li><a href="index.html#barattolino" data-i18n="nav_barattolino">Da Passeggio</a></li>
+        <li><a href="index.html#galleria" data-i18n="nav_galleria">Galleria</a></li>
+        <li><a href="index.html#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambia lingua / Change language">
+        <span class="lang-option" data-lang-btn="it">IT</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang-btn="en">EN</span>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="tel:0039045594725" data-i18n="nav_call">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        Chiama ora
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html#storia" data-i18n="nav_storia">La Storia</a></li>
+      <li><a href="menu.html" aria-current="page" data-i18n="nav_menu">Il Menù</a></li>
+      <li><a href="index.html#barattolino" data-i18n="nav_barattolino">Da Passeggio</a></li>
+      <li><a href="index.html#galleria" data-i18n="nav_galleria">Galleria</a></li>
+      <li><a href="index.html#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:0039045594725" data-i18n="nav_call">Chiama ora</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="container page-banner-grid">
+      <div class="page-banner-text">
+        <a class="back-link" href="index.html" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+          <span data-i18n="fullmenu_back">Torna alla home</span>
+        </a>
+        <p class="eyebrow" data-reveal data-i18n="fullmenu_eyebrow">A Verona un must</p>
+        <h1 data-reveal data-i18n="fullmenu_title">Barattolino da Passeggio</h1>
+        <p class="lead" data-reveal data-i18n="fullmenu_subtitle">Il menù del giorno, da gustare al volo o comodamente seduti — senza prenotazione.</p>
+      </div>
+      <div class="page-banner-media" data-reveal>
+        <picture>
+          <source srcset="assets/img/barattolino.webp" type="image/webp">
+          <img src="assets/img/barattolino.jpg" alt="Barattolino da passeggio con tortellini e parmigiano grattugiato al momento" width="1066" height="1600">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU LIST -->
+  <section class="menu-list-section" id="barattolino-menu">
+    <div class="container">
+      <div class="section-heading">
+        <p class="service-note" data-reveal data-i18n="fullmenu_service_note">Servizio dalle ore 12, senza prenotazione</p>
+      </div>
+
+      <ul class="menu-list" data-reveal>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item1_name">Tortelloni</span>
+            <span class="veg-tag"><svg class="icon-leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c0 0 10 0 14-4s2-12 2-12z" fill="currentColor"/></svg><span data-i18n="fullmenu_veg_label">Vegetariano</span></span>
+          </div>
+          <span class="menu-list-item-price">8 <span data-i18n="fullmenu_pieces_label">pezzi</span> · € 12</span>
+          <p class="menu-list-item-desc" data-i18n="fullmenu_item1_desc">Scegli il tuo preferito</p>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item2_name">Mix Tortelloni</span>
+          </div>
+          <span class="menu-list-item-price">8 <span data-i18n="fullmenu_pieces_label">pezzi</span> · € 12</span>
+          <p class="menu-list-item-desc" data-i18n="fullmenu_item2_desc">Una full immersion nel sapore</p>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item3_name">Tortelloni al Tartufo</span>
+            <span class="veg-tag"><svg class="icon-leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c0 0 10 0 14-4s2-12 2-12z" fill="currentColor"/></svg><span data-i18n="fullmenu_veg_label">Vegetariano</span></span>
+          </div>
+          <span class="menu-list-item-price">8 <span data-i18n="fullmenu_pieces_label">pezzi</span> · € 14</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item4_name">Tagliatelle al Ragù della Gina</span>
+          </div>
+          <span class="menu-list-item-price">€ 12,50</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item5_name">Tortellini Burro e Parmigiano</span>
+          </div>
+          <span class="menu-list-item-price">€ 14</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item6_name">Paccheri al Pomodoro</span>
+            <span class="veg-tag"><svg class="icon-leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c0 0 10 0 14-4s2-12 2-12z" fill="currentColor"/></svg><span data-i18n="fullmenu_veg_label">Vegetariano</span></span>
+          </div>
+          <span class="menu-list-item-price">€ 12</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item7_name">Gnocchi di Patate al Ragù Bolognese</span>
+          </div>
+          <span class="menu-list-item-price">€ 12,50</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item8_name">Gnocchi di Patate al Tartufo</span>
+            <span class="veg-tag"><svg class="icon-leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c0 0 10 0 14-4s2-12 2-12z" fill="currentColor"/></svg><span data-i18n="fullmenu_veg_label">Vegetariano</span></span>
+          </div>
+          <span class="menu-list-item-price">€ 14</span>
+        </li>
+        <li class="menu-list-item">
+          <div class="menu-list-item-main">
+            <span class="menu-list-item-name" data-i18n="fullmenu_item9_name">Lasagne al Forno</span>
+          </div>
+          <span class="menu-list-item-price">€ 12,50</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ASPORTO -->
+  <section class="asporto-section" id="asporto">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow" data-reveal data-i18n="fullmenu_asporto_eyebrow">Da portare a casa</p>
+        <h2 data-reveal data-i18n="fullmenu_asporto_title">La Pasta Fresca da Asporto</h2>
+        <p class="section-lead" data-reveal data-i18n="fullmenu_asporto_lead">Pranzo in famiglia o cena tra amici, la Gina ti fa sempre fare un figurone. Se sai mettere a bollire l'acqua e preparare burro e parmigiano, in pochi minuti potrai servire la pasta fresca che mette tutti d'accordo!</p>
+        <p class="section-lead" data-reveal data-i18n="fullmenu_asporto_body">In più in Bottega trovi una selezione di eccellenze artigianali italiane, per portare a tavola golosità di altissimo livello.</p>
+      </div>
+
+      <div class="asporto-grid">
+        <article class="asporto-card" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-tortellini.webp" type="image/webp">
+            <img src="assets/img/menu-tortellini.jpg" alt="Tortellini Valeggio pronti per l'asporto" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="fullmenu_valeggio_name">Tortellini Valeggio</h3>
+            <p class="asporto-price" data-i18n="fullmenu_valeggio_price">€ 32/Kg</p>
+            <p data-i18n="fullmenu_valeggio_desc">Ricetta tradizionale con sfoglia sottile, ripieno di carni miste e aromi: un vero classico in brodo, sempre sfizioso servito asciutto.</p>
+          </div>
+        </article>
+
+        <article class="asporto-card" data-reveal>
+          <picture>
+            <source srcset="assets/img/menu-tortelloni.webp" type="image/webp">
+            <img src="assets/img/menu-tortelloni.jpg" alt="Tortelloni freschi pronti per l'asporto" loading="lazy" width="1066" height="1600">
+          </picture>
+          <div class="tile-scrim" aria-hidden="true"></div>
+          <div class="tile-content">
+            <h3 data-i18n="fullmenu_tortelloni2_name">Tortelloni</h3>
+            <p class="asporto-price" data-i18n="fullmenu_tortelloni2_price">€ 28/Kg</p>
+            <p data-i18n="fullmenu_tortelloni2_desc">Ogni giorno tante specialità disponibili, dai più classici agli originali, sempre con ingredienti di stagione sceltissimi e abbinamenti irresistibili.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="menu-note" data-reveal data-i18n="fullmenu_asporto_note">La prenotazione anticipata della pasta è raccomandata durante le festività.</p>
+
+      <div class="asporto-cta" data-reveal>
+        <a href="tel:0039045594725" class="btn btn-primary btn-lg" data-i18n="fullmenu_cta_call">Chiama ora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS TEASER -->
+  <section class="reviews-teaser">
+    <div class="container reviews-teaser-inner" data-reveal>
+      <h2 data-i18n="fullmenu_reviews_title">I vostri "mmmh" sono la nostra soddisfazione</h2>
+      <p data-i18n="fullmenu_reviews_body">La nostra gioia? Vedervi gustare la pasta della Gina. Ma amiamo anche quando lo raccontate a tutti!</p>
+      <a class="btn btn-ghost" href="https://g.page/LaBottegadellaGinaVerona?share" target="_blank" rel="noopener" data-i18n="fullmenu_reviews_google">Recensiscici su Google</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="footer-wordmark">La Bottega <em>della Gina</em></span>
+      <p data-i18n="footer_tagline">Pasta fresca artigianale, ogni giorno, a Verona.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_explore">Esplora</h4>
+      <ul>
+        <li><a href="index.html#storia" data-i18n="nav_storia">La Storia</a></li>
+        <li><a href="menu.html" data-i18n="nav_menu">Il Menù</a></li>
+        <li><a href="index.html#galleria" data-i18n="nav_galleria">Galleria</a></li>
+        <li><a href="index.html#dove-siamo" data-i18n="nav_dove">Dove Siamo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_contact">Contatti</h4>
+      <ul>
+        <li><a href="tel:0039045594725">045 594725</a></li>
+        <li><a href="mailto:info@labottegadellagina.it">info@labottegadellagina.it</a></li>
+        <li>Via Abramo Massalongo 5/a, 37121 Verona</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_legal">Note legali</h4>
+      <ul>
+        <li>LA BOTTEGA DELLA GINA SAS DI AMBROSINO E ROSSATO</li>
+        <li>P. IVA 03986970238</li>
+        <li><a href="https://www.iubenda.com/privacy-policy/65418790" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="https://www.iubenda.com/privacy-policy/65418790/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="footer-year">2026</span> La Bottega della Gina.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/premium.js" defer></script>
+</body>
+</html>
