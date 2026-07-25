@@ -230,6 +230,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: #FFFDF9;
 }
 .hero-media { position: absolute; inset: 0; z-index: 0; }
+.hero-media picture { position: absolute; inset: 0; display: block; }
 .hero-media img {
   width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%;
 }
