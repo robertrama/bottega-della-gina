@@ -11,40 +11,74 @@
   /* ---- Mobile nav ---- */
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobile-nav');
+  var mainContent = document.getElementById('main');
+  var footerContent = document.querySelector('.site-footer');
+  var lastFocusedNav = null;
+
+  function openMobileNav() {
+    lastFocusedNav = document.activeElement;
+    mobileNav.hidden = false;
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    /* Hide the rest of the page from assistive tech and keyboard focus
+       while the full-screen panel is open — it's the only reachable content. */
+    if (mainContent) mainContent.setAttribute('inert', '');
+    if (footerContent) footerContent.setAttribute('inert', '');
+
+    if (!prefersReducedMotion && typeof gsap !== 'undefined') {
+      gsap.fromTo(mobileNav, { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
+      gsap.fromTo(mobileNav.querySelectorAll('li, .btn'), { opacity: 0, y: 14 }, {
+        opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.05, delay: 0.08
+      });
+    }
+
+    var firstLink = mobileNav.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
 
   function closeMobileNav() {
-    mobileNav.hidden = true;
+    if (mobileNav.hidden) return;
     hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (mainContent) mainContent.removeAttribute('inert');
+    if (footerContent) footerContent.removeAttribute('inert');
+
+    var finished = false;
+    function finish() {
+      if (finished) return;
+      finished = true;
+      mobileNav.hidden = true;
+      if (lastFocusedNav) lastFocusedNav.focus();
+    }
+
+    if (!prefersReducedMotion && typeof gsap !== 'undefined') {
+      gsap.to(mobileNav, { opacity: 0, y: -16, duration: 0.25, ease: 'power2.in', onComplete: finish });
+      /* Safety net: same reasoning as the hero entrance in premium.js — if the
+         tab is backgrounded mid-close, rAF stalls and onComplete never fires,
+         which would leave the page stuck with scroll locked. */
+      setTimeout(finish, 1200);
+    } else {
+      finish();
+    }
   }
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', function () {
       var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      mobileNav.hidden = isOpen;
+      if (isOpen) { closeMobileNav(); } else { openMobileNav(); }
     });
 
     mobileNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMobileNav);
     });
-  }
 
-  /* ---- Transparent header over the hero, solid once scrolled past it ---- */
-  var header = document.getElementById('site-header');
-  var hero = document.getElementById('hero');
-
-  if (header && hero && document.body.classList.contains('has-hero')) {
-    if ('IntersectionObserver' in window) {
-      var heroObserver = new IntersectionObserver(function (entries) {
-        header.classList.toggle('is-solid', !entries[0].isIntersecting);
-      }, { rootMargin: '-' + header.offsetHeight + 'px 0px 0px 0px', threshold: 0 });
-      heroObserver.observe(hero);
-    } else {
-      header.classList.add('is-solid');
-    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !mobileNav.hidden) closeMobileNav();
+    });
   }
 
   /* ---- Smooth-scroll offset for sticky header ---- */
+  var header = document.getElementById('site-header');
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var id = link.getAttribute('href').slice(1);
