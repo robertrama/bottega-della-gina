@@ -29,8 +29,22 @@
     });
   }
 
-  /* ---- Smooth-scroll offset for sticky header ---- */
+  /* ---- Transparent header over the hero, solid once scrolled past it ---- */
   var header = document.getElementById('site-header');
+  var hero = document.getElementById('hero');
+
+  if (header && hero && document.body.classList.contains('has-hero')) {
+    if ('IntersectionObserver' in window) {
+      var heroObserver = new IntersectionObserver(function (entries) {
+        header.classList.toggle('is-solid', !entries[0].isIntersecting);
+      }, { rootMargin: '-' + header.offsetHeight + 'px 0px 0px 0px', threshold: 0 });
+      heroObserver.observe(hero);
+    } else {
+      header.classList.add('is-solid');
+    }
+  }
+
+  /* ---- Smooth-scroll offset for sticky header ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var id = link.getAttribute('href').slice(1);

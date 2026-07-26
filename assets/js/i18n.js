@@ -34,12 +34,16 @@
       menu_title: 'Il Menù',
       menu_lead: 'Ogni giorno in laboratorio: le nostre specialità, sempre fresche e pronte da cucinare in pochi minuti.',
       menu_tortellini_title: 'Tortellini',
+      menu_tortellini_price: 'da € 14',
       menu_tortellini_desc: 'Il cuore della bottega: ripieni classici e stagionali, piegati uno a uno a mano.',
       menu_tortelloni_title: 'Tortelloni',
+      menu_tortelloni_price: 'da € 12',
       menu_tortelloni_desc: 'Formato generoso, ripieni ricchi: la pasta della domenica tutti i giorni della settimana.',
       menu_tagliatelle_title: 'Tagliatelle e Pappardelle',
+      menu_tagliatelle_price: 'da € 12,50',
       menu_tagliatelle_desc: 'Tirate a mano ogni mattina, pronte per il vostro sugo preferito.',
       menu_gnocchi_title: 'Gnocchi',
+      menu_gnocchi_price: 'da € 12,50',
       menu_gnocchi_desc: 'Morbidi, leggeri, preparati con patate selezionate ogni giorno.',
       menu_specialita_title: 'Ravioli e Specialità',
       menu_specialita_desc: 'Proposte stagionali che nascono dalla fantasia della bottega e dagli ingredienti del momento.',
@@ -56,6 +60,11 @@
 
       galleria_eyebrow: 'Uno sguardo in bottega',
       galleria_title: 'Galleria',
+      galleria_hint: 'Trascina per esplorare',
+
+      reviews_title: 'I vostri "mmmh" sono la nostra soddisfazione',
+      reviews_body: 'La nostra gioia? Vedervi gustare la pasta della Gina. Ma amiamo anche quando lo raccontate a tutti!',
+      reviews_google: 'Leggi le recensioni su Google',
 
       dove_eyebrow: 'Vieni a trovarci',
       dove_title: 'Dove Siamo',
@@ -110,10 +119,10 @@
       fullmenu_asporto_note: 'La prenotazione anticipata della pasta è raccomandata durante le festività.',
 
       fullmenu_valeggio_name: 'Tortellini Valeggio',
-      fullmenu_valeggio_price: '€ 32/Kg',
+      fullmenu_valeggio_price: '€ 32,00/Kg',
       fullmenu_valeggio_desc: 'Ricetta tradizionale con sfoglia sottile, ripieno di carni miste e aromi: un vero classico in brodo, sempre sfizioso servito asciutto.',
       fullmenu_tortelloni2_name: 'Tortelloni',
-      fullmenu_tortelloni2_price: '€ 28/Kg',
+      fullmenu_tortelloni2_price: '€ 28,00/Kg',
       fullmenu_tortelloni2_desc: 'Ogni giorno tante specialità disponibili, dai più classici agli originali, sempre con ingredienti di stagione sceltissimi e abbinamenti irresistibili.',
 
       fullmenu_cta_call: 'Chiama ora',
@@ -160,12 +169,16 @@
       menu_title: 'The Menu',
       menu_lead: 'Made fresh in our workshop every day — ready to cook in just a few minutes.',
       menu_tortellini_title: 'Tortellini',
+      menu_tortellini_price: 'from € 14',
       menu_tortellini_desc: 'The heart of the shop: classic and seasonal fillings, folded one by one by hand.',
       menu_tortelloni_title: 'Tortelloni',
+      menu_tortelloni_price: 'from € 12',
       menu_tortelloni_desc: 'A generous shape with rich fillings — Sunday\'s pasta, every day of the week.',
       menu_tagliatelle_title: 'Tagliatelle and Pappardelle',
+      menu_tagliatelle_price: 'from € 12.50',
       menu_tagliatelle_desc: 'Hand-rolled every morning, ready for your favourite sauce.',
       menu_gnocchi_title: 'Gnocchi',
+      menu_gnocchi_price: 'from € 12.50',
       menu_gnocchi_desc: 'Soft and light, made with carefully selected potatoes every day.',
       menu_specialita_title: 'Ravioli and Specialties',
       menu_specialita_desc: 'Seasonal creations born from the shop\'s imagination and the ingredients of the moment.',
@@ -182,6 +195,11 @@
 
       galleria_eyebrow: 'A look inside the shop',
       galleria_title: 'Gallery',
+      galleria_hint: 'Drag to explore',
+
+      reviews_title: 'Your "mmmh" is our true satisfaction',
+      reviews_body: 'Our joy? Watching you enjoy Gina\'s pasta. But we also love it when you tell everyone about it!',
+      reviews_google: 'Read our reviews on Google',
 
       dove_eyebrow: 'Come visit us',
       dove_title: 'Find Us',
@@ -236,10 +254,10 @@
       fullmenu_asporto_note: 'Early booking of pasta is recommended during the holidays.',
 
       fullmenu_valeggio_name: 'Tortellini Valeggio',
-      fullmenu_valeggio_price: '€ 32/Kg',
+      fullmenu_valeggio_price: '€ 32.00/Kg',
       fullmenu_valeggio_desc: 'Traditional recipe with thin pastry, filled with mixed meats and aromas: a true classic in broth, and always delicious served with butter and parmesan.',
       fullmenu_tortelloni2_name: 'Tortelloni',
-      fullmenu_tortelloni2_price: '€ 28/Kg',
+      fullmenu_tortelloni2_price: '€ 28.00/Kg',
       fullmenu_tortelloni2_desc: 'Many specialties available every day, from the classics to the original, always with carefully selected seasonal ingredients and irresistible combinations.',
 
       fullmenu_cta_call: 'Call now',

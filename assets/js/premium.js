@@ -36,6 +36,17 @@
       return;
     }
 
+    /* If the tab loads hidden (opened in the background from a share link,
+       an OS that froze the page, etc.) requestAnimationFrame never ticks, so
+       a GSAP timeline never advances — show the final state immediately
+       instead of leaving the headline/CTA stuck at opacity 0. */
+    if (document.hidden) {
+      gsap.set(rule, { width: '48px' });
+      gsap.set([eyebrowText, titleSpan, titleEm, subtitle, actions], { opacity: 1, y: 0, filter: 'none' });
+      if (heroImg) gsap.set(heroImg, { scale: 1 });
+      return;
+    }
+
     gsap.set(rule, { width: 0 });
     gsap.set(eyebrowText, { opacity: 0, y: 16 });
     gsap.set([titleSpan, titleEm], { opacity: 0, y: 34, filter: 'blur(14px)' });
@@ -53,6 +64,14 @@
     if (heroImg) {
       gsap.fromTo(heroImg, { scale: 1.14 }, { scale: 1, duration: 6, ease: 'power2.out' });
     }
+
+    /* Safety net: rAF-driven tweens don't advance while the tab is hidden
+       (backgrounded, minimized, OS-throttled). If the entrance hasn't
+       finished a few seconds after it should have, force it to completion
+       so the hero content is never left stuck invisible. */
+    setTimeout(function () {
+      if (tl.progress() < 1) tl.progress(1);
+    }, 4000);
   }
 
   /* ---------------------------------------------------------------------
@@ -145,6 +164,31 @@
     }
     viewport.addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
+
+    /* One-time desktop discovery hint: the horizontal filmstrip isn't an
+       obvious drag-to-scroll pattern on desktop the way a native touch swipe
+       is on mobile, so nudge fine-pointer visitors once, then remember not
+       to show it again. */
+    var hint = document.getElementById('gallery-hint');
+    if (hint && isFinePointer) {
+      var HINT_KEY = 'bdg-gallery-hint-seen';
+      var alreadySeen;
+      try { alreadySeen = localStorage.getItem(HINT_KEY); } catch (e) { alreadySeen = null; }
+
+      if (!alreadySeen) {
+        var showTimer = setTimeout(function () { hint.classList.add('is-visible'); }, 900);
+        var dismissed = false;
+        var dismissHint = function () {
+          if (dismissed) return;
+          dismissed = true;
+          clearTimeout(showTimer);
+          hint.classList.remove('is-visible');
+          try { localStorage.setItem(HINT_KEY, '1'); } catch (e) { /* storage unavailable */ }
+        };
+        viewport.addEventListener('scroll', dismissHint, { passive: true, once: true });
+        viewport.addEventListener('pointerdown', dismissHint, { once: true });
+      }
+    }
 
     if (prevBtn) prevBtn.addEventListener('click', function () {
       viewport.scrollBy({ left: -viewport.clientWidth * 0.8, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
