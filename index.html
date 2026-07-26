@@ -144,6 +144,11 @@
         <a href="#menu" class="btn btn-primary btn-lg" data-i18n="hero_cta_menu">Scopri il menù</a>
         <a href="#dove-siamo" class="btn btn-ghost btn-lg" data-i18n="hero_cta_where">Dove siamo</a>
       </div>
+      <a class="hero-rating" href="https://g.page/LaBottegadellaGinaVerona?share" target="_blank" rel="noopener" data-reveal>
+        <svg class="hero-rating-star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg>
+        <span class="hero-rating-score" data-i18n="hero_rating_score">4,6</span>
+        <span data-i18n="hero_rating_label">su Google — leggi le recensioni</span>
+      </a>
     </div>
     <a href="#storia" class="scroll-cue" aria-label="Scorri per continuare">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -371,11 +376,69 @@
     </div>
   </section>
 
-  <!-- REVIEWS TEASER -->
+  <!-- REVIEWS -->
   <section class="reviews-teaser">
-    <div class="container reviews-teaser-inner" data-reveal>
-      <h2 data-i18n="reviews_title">I vostri "mmmh" sono la nostra soddisfazione</h2>
-      <p data-i18n="reviews_body">La nostra gioia? Vedervi gustare la pasta della Gina. Ma amiamo anche quando lo raccontate a tutti!</p>
+    <div class="container">
+      <div class="reviews-teaser-inner" data-reveal>
+        <p class="eyebrow" data-i18n="reviews_eyebrow">Cosa dicono di noi</p>
+        <h2 data-i18n="reviews_title">I vostri "mmmh" sono la nostra soddisfazione</h2>
+        <p data-i18n="reviews_body">La nostra gioia? Vedervi gustare la pasta della Gina. Ma amiamo anche quando lo raccontate a tutti!</p>
+      </div>
+    </div>
+
+    <div class="reviews-viewport">
+      <ul class="reviews-track" id="reviews-track">
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote1">«Consigliatissimo! Ottimi tortelloni con ripieni diversi e sfoglia sottile ma saporita.»</p>
+          <p class="review-author">Sara M. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote2">«Bottega piccola ma molto accogliente, con posti a sedere sia fuori che al primo piano.»</p>
+          <p class="review-author">Federica C. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 4 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote3">«Il posto è carino, molto frequentato, ma anche molto buono.»</p>
+          <p class="review-author">Beatrice D. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote4">«Bel locale, veloce e pratico: un luogo curato, con uno staff simpatico e disponibile.»</p>
+          <p class="review-author">Virginia A. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote5">«Posto unico nel suo genere. Pasta fresca fatta in casa, buonissima. Molto eco-friendly.»</p>
+          <p class="review-author">Claudia C. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote6">«Che spettacolo di attività! Da giovane imprenditore siete stati fonte di ispirazione.»</p>
+          <p class="review-author">Mattia O. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+        <li class="review-card" data-reveal>
+          <div class="review-stars" aria-label="Valutazione: 5 su 5"><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg><svg class="review-star is-filled" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7-5.4-4.7 7.1-.6z"/></svg></div>
+          <p class="review-quote" data-i18n="reviews_quote7">«Tortelli e tagliatelle veramente buoni: consiglio il mix di tortelli per provarli tutti!»</p>
+          <p class="review-author">Samantha B. <span class="review-source" data-i18n="reviews_source_google">via Google</span></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="reviews-nav container">
+      <div class="reviews-progress"><span class="reviews-progress-bar" id="reviews-progress-bar"></span></div>
+      <div class="reviews-arrows">
+        <button class="reviews-arrow" id="reviews-prev" aria-label="Scorri indietro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="reviews-arrow" id="reviews-next" aria-label="Scorri avanti">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="container reviews-teaser-cta" data-reveal>
       <a class="btn btn-ghost" href="https://g.page/LaBottegadellaGinaVerona?share" target="_blank" rel="noopener" data-i18n="reviews_google">Leggi le recensioni su Google</a>
     </div>
   </section>

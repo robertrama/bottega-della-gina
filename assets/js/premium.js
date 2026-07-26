@@ -23,6 +23,7 @@
     var titleEm = hero.querySelector('.hero-title em');
     var subtitle = hero.querySelector('.hero-subtitle');
     var actions = hero.querySelector('.hero-actions');
+    var rating = hero.querySelector('.hero-rating');
     var heroImg = hero.querySelector('.hero-media img');
 
     if (!hasGsap()) {
@@ -31,7 +32,7 @@
     }
 
     if (prefersReducedMotion) {
-      gsap.set([eyebrowText, titleSpan, titleEm, subtitle, actions], { opacity: 1, y: 0, filter: 'none' });
+      gsap.set([eyebrowText, titleSpan, titleEm, subtitle, actions, rating], { opacity: 1, y: 0, filter: 'none' });
       if (rule) gsap.set(rule, { width: '48px' });
       return;
     }
@@ -42,7 +43,7 @@
        instead of leaving the headline/CTA stuck at opacity 0. */
     if (document.hidden) {
       gsap.set(rule, { width: '48px' });
-      gsap.set([eyebrowText, titleSpan, titleEm, subtitle, actions], { opacity: 1, y: 0, filter: 'none' });
+      gsap.set([eyebrowText, titleSpan, titleEm, subtitle, actions, rating], { opacity: 1, y: 0, filter: 'none' });
       if (heroImg) gsap.set(heroImg, { scale: 1 });
       return;
     }
@@ -50,7 +51,7 @@
     gsap.set(rule, { width: 0 });
     gsap.set(eyebrowText, { opacity: 0, y: 16 });
     gsap.set([titleSpan, titleEm], { opacity: 0, y: 34, filter: 'blur(14px)' });
-    gsap.set([subtitle, actions], { opacity: 0, y: 22 });
+    gsap.set([subtitle, actions, rating], { opacity: 0, y: 22 });
 
     var tl = gsap.timeline({ delay: 0.15 });
     tl.to(rule, { width: '48px', duration: 0.7, ease: 'power2.out' })
@@ -58,7 +59,8 @@
       .to(titleSpan, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out' }, '-=0.25')
       .to(titleEm, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out' }, '-=0.72')
       .to(subtitle, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.55')
-      .to(actions, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5');
+      .to(actions, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5')
+      .to(rating, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.35');
 
     /* Ken Burns slow zoom-out, independent of the scroll-linked parallax in main.js */
     if (heroImg) {
@@ -143,14 +145,16 @@
   }
 
   /* ---------------------------------------------------------------------
-     Gallery filmstrip — drag-to-scroll, arrows, progress bar, focus state
+     Generic horizontal filmstrip — drag-to-scroll, arrows, progress bar,
+     optional discovery hint and optional per-item focus state. Shared by
+     the photo gallery and the reviews carousel below.
   --------------------------------------------------------------------- */
-  function initGalleryFilmstrip() {
-    var viewport = document.querySelector('.gallery-viewport');
-    var track = document.getElementById('gallery-track');
-    var prevBtn = document.getElementById('gallery-prev');
-    var nextBtn = document.getElementById('gallery-next');
-    var progressBar = document.getElementById('gallery-progress-bar');
+  function initFilmstrip(opts) {
+    var viewport = document.querySelector(opts.viewport);
+    var track = document.querySelector(opts.track);
+    var prevBtn = opts.prev ? document.querySelector(opts.prev) : null;
+    var nextBtn = opts.next ? document.querySelector(opts.next) : null;
+    var progressBar = opts.progressBar ? document.querySelector(opts.progressBar) : null;
     if (!viewport || !track) return;
 
     /* Progress bar tied to horizontal scroll position */
@@ -169,24 +173,26 @@
        obvious drag-to-scroll pattern on desktop the way a native touch swipe
        is on mobile, so nudge fine-pointer visitors once, then remember not
        to show it again. */
-    var hint = document.getElementById('gallery-hint');
-    if (hint && isFinePointer) {
-      var HINT_KEY = 'bdg-gallery-hint-seen';
-      var alreadySeen;
-      try { alreadySeen = localStorage.getItem(HINT_KEY); } catch (e) { alreadySeen = null; }
+    if (opts.hint) {
+      var hint = document.querySelector(opts.hint);
+      if (hint && isFinePointer) {
+        var HINT_KEY = opts.hintKey;
+        var alreadySeen;
+        try { alreadySeen = localStorage.getItem(HINT_KEY); } catch (e) { alreadySeen = null; }
 
-      if (!alreadySeen) {
-        var showTimer = setTimeout(function () { hint.classList.add('is-visible'); }, 900);
-        var dismissed = false;
-        var dismissHint = function () {
-          if (dismissed) return;
-          dismissed = true;
-          clearTimeout(showTimer);
-          hint.classList.remove('is-visible');
-          try { localStorage.setItem(HINT_KEY, '1'); } catch (e) { /* storage unavailable */ }
-        };
-        viewport.addEventListener('scroll', dismissHint, { passive: true, once: true });
-        viewport.addEventListener('pointerdown', dismissHint, { once: true });
+        if (!alreadySeen) {
+          var showTimer = setTimeout(function () { hint.classList.add('is-visible'); }, 900);
+          var dismissed = false;
+          var dismissHint = function () {
+            if (dismissed) return;
+            dismissed = true;
+            clearTimeout(showTimer);
+            hint.classList.remove('is-visible');
+            try { localStorage.setItem(HINT_KEY, '1'); } catch (e) { /* storage unavailable */ }
+          };
+          viewport.addEventListener('scroll', dismissHint, { passive: true, once: true });
+          viewport.addEventListener('pointerdown', dismissHint, { once: true });
+        }
       }
     }
 
@@ -199,6 +205,7 @@
 
     /* Drag-to-scroll (mouse only; touch keeps native momentum scrolling) */
     if (isFinePointer) {
+      var dragState = opts.dragState || { moved: false };
       var isDown = false, startX = 0, startScroll = 0, moved = 0;
 
       viewport.addEventListener('pointerdown', function (e) {
@@ -220,23 +227,47 @@
         if (!isDown) return;
         isDown = false;
         viewport.classList.remove('is-dragging');
-        window.BDG_GALLERY_DRAG.moved = moved > 6;
-        setTimeout(function () { window.BDG_GALLERY_DRAG.moved = false; }, 0);
+        dragState.moved = moved > 6;
+        setTimeout(function () { dragState.moved = false; }, 0);
       }
       window.addEventListener('pointerup', endDrag);
       window.addEventListener('pointercancel', endDrag);
     }
 
-    /* Focus state as each photo nears the center of the viewport */
-    if ('IntersectionObserver' in window) {
+    /* Focus state as each item nears the center of the viewport */
+    if (opts.focusItemSelector && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           entry.target.classList.toggle('is-focused', entry.isIntersecting);
         });
       }, { root: viewport, threshold: 0.6 });
 
-      track.querySelectorAll('.gallery-item').forEach(function (item) { io.observe(item); });
+      track.querySelectorAll(opts.focusItemSelector).forEach(function (item) { io.observe(item); });
     }
+  }
+
+  function initGalleryFilmstrip() {
+    initFilmstrip({
+      viewport: '.gallery-viewport',
+      track: '#gallery-track',
+      prev: '#gallery-prev',
+      next: '#gallery-next',
+      progressBar: '#gallery-progress-bar',
+      hint: '#gallery-hint',
+      hintKey: 'bdg-gallery-hint-seen',
+      focusItemSelector: '.gallery-item',
+      dragState: window.BDG_GALLERY_DRAG
+    });
+  }
+
+  function initReviewsFilmstrip() {
+    initFilmstrip({
+      viewport: '.reviews-viewport',
+      track: '#reviews-track',
+      prev: '#reviews-prev',
+      next: '#reviews-next',
+      progressBar: '#reviews-progress-bar'
+    });
   }
 
   /* ---------------------------------------------------------------------
@@ -264,6 +295,7 @@
   function boot() {
     initHeroCinematic();
     initGalleryFilmstrip();
+    initReviewsFilmstrip();
     initMagneticButtons();
 
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {

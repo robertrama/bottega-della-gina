@@ -18,6 +18,8 @@
       hero_subtitle: 'Tortellini, tortelloni e tagliatelle fatti a mano ogni giorno, con la stessa passione di una domenica in famiglia.',
       hero_cta_menu: 'Scopri il menù',
       hero_cta_where: 'Dove siamo',
+      hero_rating_score: '4,6',
+      hero_rating_label: 'su Google — leggi le recensioni',
 
       storia_eyebrow: 'La nostra storia',
       storia_title: 'Come una volta',
@@ -62,8 +64,17 @@
       galleria_title: 'Galleria',
       galleria_hint: 'Trascina per esplorare',
 
+      reviews_eyebrow: 'Cosa dicono di noi',
       reviews_title: 'I vostri "mmmh" sono la nostra soddisfazione',
       reviews_body: 'La nostra gioia? Vedervi gustare la pasta della Gina. Ma amiamo anche quando lo raccontate a tutti!',
+      reviews_quote1: '«Consigliatissimo! Ottimi tortelloni con ripieni diversi e sfoglia sottile ma saporita.»',
+      reviews_quote2: '«Bottega piccola ma molto accogliente, con posti a sedere sia fuori che al primo piano.»',
+      reviews_quote3: '«Il posto è carino, molto frequentato, ma anche molto buono.»',
+      reviews_quote4: '«Bel locale, veloce e pratico: un luogo curato, con uno staff simpatico e disponibile.»',
+      reviews_quote5: '«Posto unico nel suo genere. Pasta fresca fatta in casa, buonissima. Molto eco-friendly.»',
+      reviews_quote6: '«Che spettacolo di attività! Da giovane imprenditore siete stati fonte di ispirazione.»',
+      reviews_quote7: '«Tortelli e tagliatelle veramente buoni: consiglio il mix di tortelli per provarli tutti!»',
+      reviews_source_google: 'via Google',
       reviews_google: 'Leggi le recensioni su Google',
 
       dove_eyebrow: 'Vieni a trovarci',
@@ -153,6 +164,8 @@
       hero_subtitle: 'Tortellini, tortelloni and tagliatelle handmade every day, with all the passion of a Sunday with family.',
       hero_cta_menu: 'Discover the menu',
       hero_cta_where: 'Find us',
+      hero_rating_score: '4.6',
+      hero_rating_label: 'on Google — read the reviews',
 
       storia_eyebrow: 'Our story',
       storia_title: 'Just like it used to be',
@@ -197,8 +210,17 @@
       galleria_title: 'Gallery',
       galleria_hint: 'Drag to explore',
 
+      reviews_eyebrow: 'What people say',
       reviews_title: 'Your "mmmh" is our true satisfaction',
       reviews_body: 'Our joy? Watching you enjoy Gina\'s pasta. But we also love it when you tell everyone about it!',
+      reviews_quote1: '"Highly recommended! Great tortelloni with different fillings and a thin, flavourful pastry."',
+      reviews_quote2: '"A small shop but a very welcoming one, with seating both outside and upstairs."',
+      reviews_quote3: '"The place is lovely and always busy, but the food is really good too."',
+      reviews_quote4: '"A nice, quick and practical spot — well kept, with friendly, helpful staff."',
+      reviews_quote5: '"A one-of-a-kind place. Homemade fresh pasta, delicious. Very eco-friendly too."',
+      reviews_quote6: '"What a fantastic business! As a young entrepreneur, you\'ve been a real inspiration."',
+      reviews_quote7: '"Tortelli and tagliatelle that are genuinely good — try the mixed tortelli to taste them all!"',
+      reviews_source_google: 'on Google',
       reviews_google: 'Read our reviews on Google',
 
       dove_eyebrow: 'Come visit us',
