@@ -37,6 +37,9 @@ Ogni volta che un `<img>` ha `aspect-ratio` in CSS **e** attributi `width`/`heig
 ## Da sapere se si testa in locale
 Il browser mette in cache `style.css` in modo aggressivo col server python base — se una modifica CSS non sembra avere effetto, fare hard refresh (Cmd+Shift+R) prima di pensare che il codice sia sbagliato.
 
+## Cache-busting dopo ogni deploy in produzione
+`index.html` e `menu.html` caricano CSS/JS locali con `?v=AAAAMMGG` (es. `style.css?v=20260726`). Dopo **ogni** modifica a un file in `assets/css/` o `assets/js/`, aggiornare questa data in **entrambi** i file HTML (tutti i tag `<link>`/`<script>` locali, non i CDN esterni come GSAP) — altrimenti chi ha già visitato il sito può continuare a vedere CSS/JS vecchi dalla cache del browser anche dopo il nuovo deploy, con bug fantasma che sembrano casuali (stili disallineati, elementi mancanti) ma sono solo un mismatch cache vecchia/HTML nuovo.
+
 ## Cosa manca / prossimi passi possibili
 - Collegare il form newsletter a un servizio vero (Mailchimp o Brevo) — al momento è solo finto lato client, istruzioni già commentate nell'HTML del form
 - Dominio e hosting definitivo (consigliato: Netlify o Vercel, drag&drop della cartella)

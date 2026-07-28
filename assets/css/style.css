@@ -253,6 +253,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   align-items: flex-end;
   overflow: hidden;
   color: #FFFDF9;
+  /* Dark fallback so a slow-loading hero photo never flashes a pale gap —
+     it just reads as "fading in from dark" until the image paints. */
+  background: #1B140F;
 }
 .hero-media { position: absolute; inset: 0; z-index: 0; }
 .hero-media picture { position: absolute; inset: 0; display: block; }
